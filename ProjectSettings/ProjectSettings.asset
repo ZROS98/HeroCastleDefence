@@ -652,10 +652,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 3c818bb0-f7d9-4843-8552-6049293ecfac
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: HeroCastleDefence
+  organizationId: zros98
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
