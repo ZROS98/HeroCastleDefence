@@ -26,7 +26,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom(null, new Photon.Realtime.RoomOptions() {MaxPlayers = 2});
+        PhotonNetwork.CreateRoom(null, new Photon.Realtime.RoomOptions() {MaxPlayers = 5});
     }
 
     public void JoinRoom()
@@ -37,7 +37,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Log("Joined the room");
-        
         PhotonNetwork.LoadLevel("Game");
     }
     
