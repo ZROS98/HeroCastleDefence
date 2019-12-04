@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 namespace UnityNightPool {
@@ -33,7 +34,9 @@ namespace UnityNightPool {
 
 	    PoolObject Create(int index = -1)
 	    {
-	        GameObject obj = Object.Instantiate(setup.prefab.gameObject) as GameObject;
+		    Vector3 randomPosition = new Vector3(Random.Range(-5, 0), Random.Range(-5, 5));
+	        //GameObject obj = Object.Instantiate(setup.prefab.gameObject) as GameObject;
+	        GameObject obj =  PhotonNetwork.Instantiate("Mob", randomPosition, Quaternion.identity);
 	        obj.name = setup.prefab.name + "(Pool)";
 	        var p = obj.GetComponent<PoolObject>();
 	        if (p != null)

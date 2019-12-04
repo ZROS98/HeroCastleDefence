@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92e5cb561b64fc448b43f6d3a916ba7, type: 3}
+  m_Script: {fileID: 11500000, guid: 92146ee088d9cd24685c6fbe1ca16732, type: 3}
   m_Name: PoolConfig
   m_EditorClassIdentifier: 
-  _pools: []
+  _pools:
+  - prefab: {fileID: -1612719969924767217, guid: c45ac8d333cbdc2438854470496eb313,
+      type: 3}
+    id: 1
+    switchGameObject: 1

@@ -364,7 +364,7 @@
             <e p="LobbyManager.cs" t="Include" />
           </e>
           <e p="PlayerControls.cs" t="Include" />
-          <e p="Pool" t="Include">
+          <e p="PoolObject" t="Include">
             <e p="Platform.cs" t="Include" />
             <e p="PlatformCreator.cs" t="Include" />
             <e p="Pool.cs" t="Include" />
