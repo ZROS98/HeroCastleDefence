@@ -4,6 +4,14 @@
     <e p="C:\Progrmaming\Git_Folder\HeroCastleDefence" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="3DBuildings" t="Include">
+          <e p="Fortress Gate_Free" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="FreeDungeon" t="Include">
+            <e p="freeDungeon_ReadMe.txt" t="Include" />
+          </e>
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -348,7 +356,6 @@
             </e>
           </e>
         </e>
-        <e p="PlayerControls.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CreateMob.cs" t="Include" />
           <e p="Move.cs" t="Include" />
@@ -356,6 +363,7 @@
             <e p="GameManager.cs" t="Include" />
             <e p="LobbyManager.cs" t="Include" />
           </e>
+          <e p="PlayerControls.cs" t="Include" />
           <e p="Pool" t="Include">
             <e p="Platform.cs" t="Include" />
             <e p="PlatformCreator.cs" t="Include" />
