@@ -11,7 +11,7 @@ public class CreateMob : MonoBehaviour
     public Text textField;
     private void Start()
     {
-          _photonView = GetComponent<PhotonView>();
+          //_photonView = GetComponent<PhotonView>();
           testString = PhotonNetwork.LocalPlayer.NickName;
     }  
     
@@ -21,17 +21,30 @@ public class CreateMob : MonoBehaviour
     }
     public void Spawn()
     {
+        RPC_CreateMob();
+        _photonView = PhotonView.Get(this);
         if(!_photonView.IsMine) return;
-        _photonView.RPC("RPC_CreateMob", RpcTarget.All);
-        
-    }
-    
-    public void ReturnToPool()
-    {
-        if(!_photonView.IsMine) return;
-        _photonView.RPC("RPC_ReturnMobToPool", RpcTarget.All);
+        _photonView.RPC("ReturnPoolObject", RpcTarget.All);
     }
 
+    [PunRPC]
+    private PoolObject ReturnPoolObject()
+    {
+        return _poolObject;
+    }
+    public void ReturnToPool()
+    {
+        //if(!_photonView.IsMine) return;
+        _photonView.RPC("ReturnReturnedPoolObject", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private PoolObject ReturnReturnedPoolObject()
+    {
+        PoolManager.ReturnPool();
+        return _poolObject;
+    }
+    
     [PunRPC]
     void RPC_CreateMob()
     {
@@ -61,5 +74,4 @@ public class CreateMob : MonoBehaviour
 //        }
 //    }
 
-    
 }
