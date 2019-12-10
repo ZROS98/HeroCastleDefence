@@ -358,12 +358,15 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CreateMob.cs" t="Include" />
+          <e p="GameSetup.cs" t="Include" />
           <e p="Move.cs" t="Include" />
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LobbyManager.cs" t="Include" />
           </e>
+          <e p="PhotonPlayer.cs" t="Include" />
           <e p="PlayerControls.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
           <e p="PoolObject" t="Include">
             <e p="Platform.cs" t="Include" />
             <e p="PlatformCreator.cs" t="Include" />
@@ -374,6 +377,11 @@
             <e p="PoolSetup.cs" t="Include" />
           </e>
           <e p="QuitGame.cs" t="Include" />
+          <e p="TestingRPC" t="Include">
+            <e p="AvatarSetup.cs" t="Include" />
+            <e p="MenuController.cs" t="Include" />
+            <e p="PlayerInfo.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="HeroCastleDefence.sln" t="IncludeFlat" />

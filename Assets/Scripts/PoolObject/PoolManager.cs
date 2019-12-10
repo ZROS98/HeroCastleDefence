@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 namespace UnityNightPool {
@@ -25,9 +26,11 @@ namespace UnityNightPool {
 		}
 
 
-		static void Init() {
+		public static void Init() {
 			if (!init) {
                 parent = (new GameObject ("Pools")).transform;
+                parent.gameObject.AddComponent<PhotonView>();
+                
                 Object.DontDestroyOnLoad (parent.gameObject);
 				for (int i = 0; i < PoolConfig.pools.Count; i++) {
 					if (PoolConfig.pools [i].prefab != null) {

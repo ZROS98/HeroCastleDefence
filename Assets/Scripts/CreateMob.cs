@@ -1,77 +1,71 @@
-﻿using Photon.Pun;
+﻿using System;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityNightPool;
 
 public class CreateMob : MonoBehaviour
 {
-    private PoolObject _poolObject;
+    private PoolObject _senderPoolObject;
+    private PoolObject _targetPoolObject;
+    PhotonView pv_senderPoolObject;
+    PhotonView pv_targetPoolObject;
     private PhotonView _photonView;
     public string testString;
     public Text textField;
+    
+
+    private void Awake()
+    {
+        PoolManager.Init();
+    }
+
     private void Start()
     {
-          //_photonView = GetComponent<PhotonView>();
-          testString = PhotonNetwork.LocalPlayer.NickName;
-    }  
-    
+        pv_senderPoolObject = _senderPoolObject.gameObject.AddComponent(typeof(PhotonView)) as PhotonView;
+        pv_targetPoolObject = _targetPoolObject.gameObject.AddComponent(typeof(PhotonView)) as PhotonView;
+        testString = PhotonNetwork.LocalPlayer.NickName;
+    }
     private void Update()
     {
         textField.text = testString;
     }
+    [PunRPC]
+    private void ReturnPoolObject(int senderPool, int targetPool)
+    {
+        // return _poolObject;
+        //_senderPoolObject = PhotonView.Find(senderPool).gameObject.GetComponent<PhotonView>();
+        // _targetPoolObject = PhotonView.Find(targetPool);
+        PhotonView.Find(senderPool);
+    }
+
+
     public void Spawn()
     {
-        RPC_CreateMob();
+        СreateMob();
         _photonView = PhotonView.Get(this);
         if(!_photonView.IsMine) return;
-        _photonView.RPC("ReturnPoolObject", RpcTarget.All);
+        _photonView.RPC("ReturnPoolObject", RpcTarget.All, _senderPoolObject.gameObject.GetPhotonView().ViewID, _targetPoolObject.gameObject.GetPhotonView().ViewID);
     }
-
-    [PunRPC]
-    private PoolObject ReturnPoolObject()
+    void СreateMob()
     {
-        return _poolObject;
-    }
-    public void ReturnToPool()
-    {
-        //if(!_photonView.IsMine) return;
-        _photonView.RPC("ReturnReturnedPoolObject", RpcTarget.All);
-    }
-
-    [PunRPC]
-    private PoolObject ReturnReturnedPoolObject()
-    {
-        PoolManager.ReturnPool();
-        return _poolObject;
-    }
-    
-    [PunRPC]
-    void RPC_CreateMob()
-    {
-        _poolObject = PoolManager.Get(1);
+        _senderPoolObject = PoolManager.Get(1);
         testString = "OK";
     }
 
-    [PunRPC]
-    void RPC_ReturnMobToPool()
-    { 
+
+
+
+    public void ReturnToPool()
+    {
+        ReturnMobToPool();
+        if (!_photonView.IsMine) return;
+        _photonView.RPC("ReturnPoolObject", RpcTarget.All);
+    }
+    void ReturnMobToPool()
+    {
         PoolManager.ReturnPool();
         testString = "000";
     }
-
-//    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-//    {
-//        if (stream.IsWriting)
-//        {
-//            stream.SendNext(testString);
-//            Debug.Log("writing");
-//        }
-//        else
-//        {
-//            testString = (string) stream.ReceiveNext();
-//            
-//            Debug.Log("reading");
-//        }
-//    }
 
 }
