@@ -367,15 +367,6 @@
           <e p="PhotonPlayer.cs" t="Include" />
           <e p="PlayerControls.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
-          <e p="PoolObject" t="Include">
-            <e p="Platform.cs" t="Include" />
-            <e p="PlatformCreator.cs" t="Include" />
-            <e p="Pool.cs" t="Include" />
-            <e p="PoolConfig.cs" t="Include" />
-            <e p="PoolManager.cs" t="Include" />
-            <e p="PoolObject.cs" t="Include" />
-            <e p="PoolSetup.cs" t="Include" />
-          </e>
           <e p="QuitGame.cs" t="Include" />
           <e p="TestingRPC" t="Include">
             <e p="AvatarSetup.cs" t="Include" />
