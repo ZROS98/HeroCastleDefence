@@ -7,6 +7,8 @@ public class CreateMob : MonoBehaviour
 {
     public GameObject mobBox;
     public GameObject mobSpawnArea;
+    private PhotonView p_photonView;
+
     public void Create()
     {
         int countChild = gameObject.transform.childCount;
@@ -16,7 +18,9 @@ public class CreateMob : MonoBehaviour
         int spacePosition = randomCharacter.name.LastIndexOf(' ');
         string childName = randomCharacter.name.Substring(0, spacePosition);
         var childObject = randomCharacter.transform.Find(childName);
+        randomCharacter.GetComponent<PhotonView>();
         childObject.GetComponent<SkinnedMeshRenderer>().enabled = true;
-
     }
+    
+    
 }

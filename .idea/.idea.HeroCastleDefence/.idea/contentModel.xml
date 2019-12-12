@@ -368,6 +368,7 @@
           <e p="PlayerControls.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="QuitGame.cs" t="Include" />
+          <e p="ReturnMob.cs" t="Include" />
           <e p="StartCreate.cs" t="Include" />
           <e p="TestingRPC" t="Include">
             <e p="AvatarSetup.cs" t="Include" />
