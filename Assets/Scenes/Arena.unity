@@ -365,8 +365,8 @@ GameObject:
   - component: {fileID: 120382619}
   - component: {fileID: 120382618}
   - component: {fileID: 120382617}
-  - component: {fileID: 120382622}
   - component: {fileID: 120382621}
+  - component: {fileID: 120382622}
   m_Layer: 0
   m_Name: MobBox
   m_TagString: Untagged
@@ -446,7 +446,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &120382621
 MonoBehaviour:
@@ -1611,6 +1611,8 @@ GameObject:
   m_Component:
   - component: {fileID: 748555428}
   - component: {fileID: 748555429}
+  - component: {fileID: 748555430}
+  - component: {fileID: 748555431}
   m_Layer: 0
   m_Name: GameSetup
   m_TagString: Untagged
@@ -1647,6 +1649,42 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 169474590}
   - {fileID: 1997441981}
+--- !u!114 &748555430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748555427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb6b069bef8d6b44bff67558e4c9380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAvatar: {fileID: 5464318643806622080, guid: ce0f9beb90dd8db488019eb981d84c4d,
+    type: 3}
+--- !u!114 &748555431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748555427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &781294331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1721162188}
+      - m_Target: {fileID: 120382621}
         m_MethodName: Create
         m_Mode: 1
         m_Arguments:
@@ -2313,7 +2351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1721162188}
+      - m_Target: {fileID: 0}
         m_MethodName: ReturnToPool
         m_Mode: 1
         m_Arguments:
@@ -3844,12 +3882,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648516464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.20071612, y: 0.52908826, z: -0.1304462, w: 0.8141023}
+  m_LocalPosition: {x: -3.6134682, y: -11.072366, z: 36.134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1727493593}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721162184
 GameObject:
@@ -3861,7 +3899,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1721162190}
   - component: {fileID: 1721162189}
-  - component: {fileID: 1721162188}
   - component: {fileID: 1721162187}
   - component: {fileID: 1721162186}
   - component: {fileID: 1721162185}
@@ -3921,20 +3958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdd450259a299248ab41b9badf44787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1721162188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721162184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048b02818e5a92248a562937b6c8f442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mobBox: {fileID: 0}
-  mobSpawnArea: {fileID: 0}
 --- !u!114 &1721162189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4042,7 +4065,8 @@ Transform:
   m_LocalRotation: {x: 0.20071612, y: -0.52908826, z: 0.1304462, w: 0.8141023}
   m_LocalPosition: {x: 26, y: 26.6, z: -7.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1648516467}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 27.7, y: -66.04, z: 0}
