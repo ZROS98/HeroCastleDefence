@@ -16,13 +16,15 @@ public class StartCreate : MonoBehaviourPunCallbacks
         foreach (var prefabCharacter in p_charactersPrefabs)
         {
             Debug.Log(p_charactersPrefabs.Length);
-            GameObject newObjectCharacter = PhotonNetwork.Instantiate(prefabCharacter.name, p_mobDefoltSpawnPoint.position,
+            GameObject newObjectCharacter = (GameObject) Instantiate(prefabCharacter, p_mobDefoltSpawnPoint.position,
                 p_mobDefoltSpawnPoint.rotation);
             newObjectCharacter.transform.SetParent(transform);
             int spacePosition = newObjectCharacter.name.LastIndexOf(' ');
             string childName = newObjectCharacter.name.Substring(0, spacePosition);
             var childObject = newObjectCharacter.transform.FindChild(childName);
             childObject.GetComponent<SkinnedMeshRenderer>().enabled = false;
+
+            newObjectCharacter.GetComponent<MobSettings>().transformMobDefoltSpawnPiont = p_mobDefoltSpawnPoint;
         }
 
     }
