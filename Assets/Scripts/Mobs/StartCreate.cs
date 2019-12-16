@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartCreate : MonoBehaviourPunCallbacks
 {
@@ -16,8 +17,9 @@ public class StartCreate : MonoBehaviourPunCallbacks
         foreach (var prefabCharacter in p_charactersPrefabs)
         {
             Debug.Log(p_charactersPrefabs.Length);
-            GameObject newObjectCharacter = (GameObject) Instantiate(prefabCharacter, p_mobDefoltSpawnPoint.position,
+            GameObject newObjectCharacter = (GameObject) PhotonNetwork.InstantiateSceneObject(prefabCharacter.name, p_mobDefoltSpawnPoint.position,
                 p_mobDefoltSpawnPoint.rotation);
+            
             newObjectCharacter.transform.SetParent(transform);
             int spacePosition = newObjectCharacter.name.LastIndexOf(' ');
             string childName = newObjectCharacter.name.Substring(0, spacePosition);

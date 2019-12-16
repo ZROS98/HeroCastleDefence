@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6142d06559794540ab7cad87c28a879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobBox: {fileID: 0}
+  transformMobDefoltSpawnPiont: {fileID: 0}
   isDefault: 0
 --- !u!1 &6928890043651971783
 GameObject:

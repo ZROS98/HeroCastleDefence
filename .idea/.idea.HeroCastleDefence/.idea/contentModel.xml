@@ -357,8 +357,14 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="CreateMob.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
+          <e p="Mobs" t="Include">
+            <e p="MobMovement.cs" t="Include" />
+            <e p="MobSettings.cs" t="Include" />
+            <e p="MobSpawn.cs" t="Include" />
+            <e p="ReturnMob.cs" t="Include" />
+            <e p="StartCreate.cs" t="Include" />
+          </e>
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LobbyManager.cs" t="Include" />
@@ -366,8 +372,6 @@
           <e p="PhotonPlayer.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="QuitGame.cs" t="Include" />
-          <e p="ReturnMob.cs" t="Include" />
-          <e p="StartCreate.cs" t="Include" />
           <e p="TestingRPC" t="Include">
             <e p="AvatarSetup.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
