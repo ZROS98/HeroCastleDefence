@@ -3,7 +3,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreateMob : MonoBehaviour
+public class CreateMob : MonoBehaviourPunCallbacks
 {
     public GameObject mobBox;
     public GameObject mobSpawnArea;

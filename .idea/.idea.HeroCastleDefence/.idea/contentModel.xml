@@ -359,13 +359,11 @@
         <e p="Scripts" t="Include">
           <e p="CreateMob.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
-          <e p="Move.cs" t="Include" />
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LobbyManager.cs" t="Include" />
           </e>
           <e p="PhotonPlayer.cs" t="Include" />
-          <e p="PlayerControls.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="QuitGame.cs" t="Include" />
           <e p="ReturnMob.cs" t="Include" />

@@ -4,7 +4,7 @@ using System.IO;
 using Photon.Pun;
 using UnityEngine;
 
-public class PhotonPlayer : MonoBehaviour
+public class PhotonPlayer : MonoBehaviourPunCallbacks
 {
     private PhotonView PV;
 
@@ -14,10 +14,10 @@ public class PhotonPlayer : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
-        if (PV.IsMine)
-        {
-            myAvatar = PhotonNetwork.Instantiate("PlayerAvatar",
+        //if (PV.IsMine)
+        //{
+            PhotonNetwork.Instantiate(myAvatar.name,
                 GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
-        }
+        //}
     }
 }

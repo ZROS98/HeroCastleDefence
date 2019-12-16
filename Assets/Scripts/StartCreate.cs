@@ -3,18 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartCreate : MonoBehaviour
+public class StartCreate : MonoBehaviourPunCallbacks
 {
-     private Object[] p_charactersPrefabs;
+     public Object[] p_charactersPrefabs;
      [SerializeField] private Transform p_mobDefoltSpawnPoint;
+      
 
     [System.Obsolete]
     void Start()
     {
-        p_charactersPrefabs = Resources.LoadAll("Characters", typeof(GameObject));
+        //p_charactersPrefabs = Resources.LoadAll( "", typeof(GameObject));
         foreach (var prefabCharacter in p_charactersPrefabs)
         {
-            GameObject newObjectCharacter = (GameObject) Instantiate(prefabCharacter, p_mobDefoltSpawnPoint.position,
+            Debug.Log(p_charactersPrefabs.Length);
+            GameObject newObjectCharacter = PhotonNetwork.Instantiate(prefabCharacter.name, p_mobDefoltSpawnPoint.position,
                 p_mobDefoltSpawnPoint.rotation);
             newObjectCharacter.transform.SetParent(transform);
             int spacePosition = newObjectCharacter.name.LastIndexOf(' ');

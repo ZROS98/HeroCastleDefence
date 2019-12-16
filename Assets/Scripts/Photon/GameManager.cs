@@ -8,14 +8,7 @@ using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviourPunCallbacks
-{
-    public GameObject playerPrefab;
-//    private void Start()
-//    {
-//        Vector3 pos = new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
-//        PhotonNetwork.Instantiate(playerPrefab.name, pos, Quaternion.identity);
-//    }
-
+{ 
     public void Leave()
     {
         PhotonNetwork.LeaveRoom();

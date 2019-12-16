@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class ReturnMob : MonoBehaviour
+public class ReturnMob : MonoBehaviourPunCallbacks
 {
    public GameObject mobBox;
    [SerializeField] private Transform p_mobDefoltSpawnPoint;
