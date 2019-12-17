@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class StartCreate : MonoBehaviourPunCallbacks
 {
      public Object[] p_charactersPrefabs;
-     [SerializeField] private Transform p_mobDefoltSpawnPoint;
-      
+     [SerializeField] private Transform p_transformMobDefaultSpawnPoint;
+     [SerializeField] private Transform p_transformFinalWayPointPoint;
+
 
     [System.Obsolete]
     void Start()
@@ -16,9 +17,8 @@ public class StartCreate : MonoBehaviourPunCallbacks
         //p_charactersPrefabs = Resources.LoadAll( "", typeof(GameObject));
         foreach (var prefabCharacter in p_charactersPrefabs)
         {
-            Debug.Log(p_charactersPrefabs.Length);
-            GameObject newObjectCharacter = (GameObject) PhotonNetwork.InstantiateSceneObject(prefabCharacter.name, p_mobDefoltSpawnPoint.position,
-                p_mobDefoltSpawnPoint.rotation);
+            GameObject newObjectCharacter = (GameObject) PhotonNetwork.InstantiateSceneObject(prefabCharacter.name, p_transformMobDefaultSpawnPoint.position,
+                p_transformMobDefaultSpawnPoint.rotation);
             
             newObjectCharacter.transform.SetParent(transform);
             int spacePosition = newObjectCharacter.name.LastIndexOf(' ');
@@ -26,7 +26,8 @@ public class StartCreate : MonoBehaviourPunCallbacks
             var childObject = newObjectCharacter.transform.FindChild(childName);
             childObject.GetComponent<SkinnedMeshRenderer>().enabled = false;
 
-            newObjectCharacter.GetComponent<MobSettings>().transformMobDefoltSpawnPiont = p_mobDefoltSpawnPoint;
+            newObjectCharacter.GetComponent<MobSettings>().transformMobDefaultSpawnPiont = p_transformMobDefaultSpawnPoint;
+            newObjectCharacter.GetComponent<MobSettings>().transformFinalWayPoint = p_transformFinalWayPointPoint;        
         }
 
     }

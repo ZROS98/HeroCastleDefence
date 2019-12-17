@@ -479,7 +479,8 @@ MonoBehaviour:
   p_charactersPrefabs:
   - {fileID: 6928838178167687981, guid: 1a2cd28e0e52e784991939df2f5d6df9, type: 3}
   - {fileID: 7095372581501099423, guid: 811d7130c68922a4290b69aa1c2be5e7, type: 3}
-  p_mobDefoltSpawnPoint: {fileID: 1817230958}
+  p_transformMobDefaultSpawnPoint: {fileID: 1817230958}
+  p_transformFinalWayPointPoint: {fileID: 169474590}
 --- !u!114 &120382623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobBox: {fileID: 120382616}
-  p_mobDefoltSpawnPoint: {fileID: 1817230958}
+  p_mobDefaultSpawnPoint: {fileID: 1817230958}
 --- !u!114 &120382624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4196,8 +4197,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817230957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.14, y: 0.26, z: 9.410293}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -46.14, y: 1.1599998, z: 35.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

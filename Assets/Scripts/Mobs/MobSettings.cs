@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MobSettings : MonoBehaviour
 {
-    public Transform transformMobDefoltSpawnPiont;
+    public Transform transformMobDefaultSpawnPiont;
+    public Transform transformFinalWayPoint;
     public bool isDefault;
-
     void Update()
     {
-        isDefault = gameObject.transform.position == transformMobDefoltSpawnPiont.position ? true : false;
+        isDefault = gameObject.transform.position == transformMobDefaultSpawnPiont.position ? true : false;
     }
 }
