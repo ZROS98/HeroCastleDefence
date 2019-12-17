@@ -2,6 +2,7 @@
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class MobSpawn : MonoBehaviourPunCallbacks
 {
@@ -9,6 +10,7 @@ public class MobSpawn : MonoBehaviourPunCallbacks
     public GameObject mobSpawnArea;
     private PhotonView p_photonView;
     private int mobID;
+    private GameObject randomCharacter;
 
     private void Start()
     {
@@ -27,9 +29,16 @@ public class MobSpawn : MonoBehaviourPunCallbacks
         //int countChild = gameObject.transform.childCount;
         //int randomChild = UnityEngine.Random.Range(0, countChild);
         //var randomCharacter = mobBox.transform.GetChild(randomChild);
-
+        int randomNumber =  UnityEngine.Random.Range(0, 2);
         MobArray mobArray = GetComponent<MobArray>();
-        var randomCharacter = mobArray.mobFilledArray[mobID];
+        
+        if (mobID == 0)
+        {
+            randomCharacter = mobArray.mobWomanArray[randomNumber];
+        }else if (mobID == 1)
+        {
+            randomCharacter = mobArray.mobNinjaArray[randomNumber];
+        }
         
         randomCharacter.transform.position = mobSpawnArea.transform.position;
         int spacePosition = randomCharacter.name.LastIndexOf(' ');

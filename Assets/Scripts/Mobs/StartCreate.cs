@@ -17,6 +17,7 @@ public class StartCreate : MonoBehaviourPunCallbacks
         //p_charactersPrefabs = Resources.LoadAll( "", typeof(GameObject));
         foreach (var prefabCharacter in p_charactersPrefabs)
         {
+            
             GameObject newObjectCharacter = (GameObject) PhotonNetwork.InstantiateSceneObject(prefabCharacter.name, p_transformMobDefaultSpawnPoint.position,
                 p_transformMobDefaultSpawnPoint.rotation);
             

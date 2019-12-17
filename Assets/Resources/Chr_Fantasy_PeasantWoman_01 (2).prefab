@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 7197583943736816290}
   m_Layer: 0
   m_Name: Chr_Fantasy_PeasantWoman_01 (2)
-  m_TagString: Mob
+  m_TagString: MobWoman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

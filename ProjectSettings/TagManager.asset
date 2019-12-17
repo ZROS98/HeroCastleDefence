@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Mob
+  - MobNinja
+  - MobWoman
   layers:
   - Default
   - TransparentFX

@@ -480,6 +480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_charactersPrefabs:
   - {fileID: 6928838178167687981, guid: 1a2cd28e0e52e784991939df2f5d6df9, type: 3}
+  - {fileID: 6928838178167687981, guid: 1a2cd28e0e52e784991939df2f5d6df9, type: 3}
+  - {fileID: 7095372581501099423, guid: 811d7130c68922a4290b69aa1c2be5e7, type: 3}
   - {fileID: 7095372581501099423, guid: 811d7130c68922a4290b69aa1c2be5e7, type: 3}
   p_transformMobDefaultSpawnPoint: {fileID: 1817230958}
   p_transformFinalWayPointPoint: {fileID: 169474590}
@@ -531,7 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a2e1f82e5caac479fc20ecaa57afdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobFilledArray: []
+  mobNinjaArray: []
+  mobWomanArray: []
 --- !u!1001 &120668136
 PrefabInstance:
   m_ObjectHideFlags: 0
