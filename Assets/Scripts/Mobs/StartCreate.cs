@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class StartCreate : MonoBehaviourPunCallbacks
 {
     public Object[] p_charactersPrefabs;
-    [SerializeField] private Transform p_transformMobDefaultSpawnPoint;
-    [SerializeField] private Transform p_transformFinalWayPointPoint;
+    private Transform p_transformMobDefaultSpawnPoint;
+    private Transform p_transformFinalWayPointPoint;
     private Dictionary<string, Dictionary<string, GameObject>> dictionaryRegister;
 
     [System.Obsolete]
@@ -28,8 +28,8 @@ public class StartCreate : MonoBehaviourPunCallbacks
             var childObject = newObjectCharacter.transform.FindChild(childName);
             childObject.GetComponent<SkinnedMeshRenderer>().enabled = false;
 
-            newObjectCharacter.GetComponent<MobSettings>().transformMobDefaultSpawnPiont = p_transformMobDefaultSpawnPoint;
-            newObjectCharacter.GetComponent<MobSettings>().transformFinalWayPoint = p_transformFinalWayPointPoint;        
+//            newObjectCharacter.GetComponent<MobSettings>().transformMobDefaultSpawnPiont = p_transformMobDefaultSpawnPoint;
+//            newObjectCharacter.GetComponent<MobSettings>().transformFinalWayPoint = p_transformFinalWayPointPoint;        
         }
 
     }
