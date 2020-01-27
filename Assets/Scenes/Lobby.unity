@@ -2111,7 +2111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knight
+  m_Text: 'Ninja
 
 '
 --- !u!222 &1604996200
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySelectedCharacter: 0
   allCharacters:
-  - {fileID: 1013326358641868, guid: 35986e10285ed2c4a859713deff1b9de, type: 3}
+  - {fileID: 1880444566353528, guid: 39d98a079e6aa9744afb74f16a271c9e, type: 3}
   - {fileID: 1181921010304908, guid: ad5d192ff58055741beb3d8e0e2466e6, type: 3}
   - {fileID: 1744385805961278, guid: f9527c2757f240d4092108c99f07e436, type: 3}
   - {fileID: 1610447763959210, guid: 6739c8872dae63747a4ea064985a789f, type: 3}

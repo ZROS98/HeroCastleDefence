@@ -366,11 +366,13 @@
             <e p="ReturnMob.cs" t="Include" />
             <e p="StartCreate.cs" t="Include" />
           </e>
+          <e p="Movement.cs" t="Include" />
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="LobbyManager.cs" t="Include" />
           </e>
           <e p="PhotonPlayer.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="QuitGame.cs" t="Include" />
           <e p="TestingRPC" t="Include">
