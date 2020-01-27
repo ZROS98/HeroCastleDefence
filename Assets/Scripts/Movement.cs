@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Screen.lockCursor = true;
     }
 
     // Update is called once per frame
@@ -24,14 +24,24 @@ public class Movement : MonoBehaviour
     {
         CameraRotation();
         Vector3 vectorMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
-        gameObject.transform.position += vectorMovement.normalized * moveSpeed * Time.deltaTime;
+        //gameObject.transform.position += vectorMovement.normalized * moveSpeed * Time.deltaTime;
+        transform.Translate(vectorMovement.normalized*moveSpeed*Time.deltaTime);
     }
 
     public void CameraRotation()
     {
         yaw += speedH * Input.GetAxis("Mouse X");
         pitch -= speedV * Input.GetAxis("Mouse Y");
+        if (pitch < -45)
+        {
+            pitch = -45;
+        }
+        else if (pitch > 45)
+        {
+            pitch = 45;
+        }
         
         transform.eulerAngles = new Vector3(pitch,yaw, 0.0f);
     }
+
 }
