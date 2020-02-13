@@ -37,6 +37,6 @@ MonoBehaviour:
   - RPC_AddCharacter
   - RPC_Create
   - RPC_Return
-  - RPC_FillingNewObject
+  - DestroyMob
   DisableAutoOpenWizard: 1
   ShowSettings: 1

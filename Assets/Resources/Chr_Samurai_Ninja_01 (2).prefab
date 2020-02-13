@@ -1123,6 +1123,7 @@ GameObject:
   - component: {fileID: 7143800326170629967}
   - component: {fileID: -1269763315163396717}
   - component: {fileID: -8111450078728467825}
+  - component: {fileID: -9215408183229483637}
   m_Layer: 0
   m_Name: Chr_Samurai_Ninja_01 (2)
   m_TagString: MobNinja
@@ -1202,6 +1203,22 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!114 &-9215408183229483637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095372581501099423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74a93cc6ab80774ba1a616911483183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chrCamera: {fileID: 0}
+  moveSpeed: 15
+  speedH: 2
+  speedV: 2
 --- !u!1 &7095390841854258489
 GameObject:
   m_ObjectHideFlags: 0
